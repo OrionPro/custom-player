@@ -1,0 +1,28 @@
+@import 'utils/variables';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+@import 'utils/color';
+@import 'utils/mixin';
+@import 'utils/fonts';
+@import 'utils/grid';
+@import 'utils/animation';
+
+@import 'components/button';
+@import 'components/carousel';
+@import 'components/player';
+@import 'components/tabs';
+@import 'components/checkbox';
+@import 'components/input';
+@import 'components/select2';
+@import 'components/cf7';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/hero';
+@import 'layout/articles';
+@import 'layout/faqs';
+@import 'layout/contact';
+@import 'layout/blog';
+@import 'layout/single_post';
+@import 'layout/404';

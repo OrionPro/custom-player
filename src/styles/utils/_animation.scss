@@ -1,0 +1,25 @@
+.slide-bottom {
+    animation: slide-bottom 0.3s cubic-bezier(0,0,1,1) both;
+}
+
+@keyframes slide-bottom {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(70px);
+    }
+}
+
+.slide-bottom-reverse {
+    animation: slide-bottom-reverse 0.3s cubic-bezier(0,0,1,1) reverse both;
+}
+
+@keyframes slide-bottom-reverse {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(70px);
+    }
+}

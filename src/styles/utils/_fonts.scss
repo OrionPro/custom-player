@@ -1,0 +1,99 @@
+@mixin primary-font-family {
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin title-font-family {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: $red;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  @include title-font-family;
+  margin: 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 145%;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 50px;
+  font-weight: 400;
+  margin-bottom: 30px;
+
+  b {
+    font-weight: 700;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 35px;
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 145%;
+  @media screen and (max-width: 1600px) {
+    line-height: 130%;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 24px;
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+ul {
+  @include reset-list;
+}
+
+.white_text {
+  color: $white;
+}

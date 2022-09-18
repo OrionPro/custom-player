@@ -1,0 +1,162 @@
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  max-width: 100%;
+  padding: 20px 10px;
+  color: $black;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 150%;
+  @include primary-font-family;
+
+  &::placeholder {
+    color: $black;
+  }
+}
+
+.custom-input-file {
+  cursor: pointer;
+  background-color: #fff;
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 17px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+
+  @media (min-width: 1500px) {
+    max-width: 400px;
+  }
+
+  &:before {
+    content: 'Choose image files';
+    display: inline-block;
+    line-height: 40px;
+    border: 1px solid #979797;
+    background-color: #d8d8d8;
+    padding: 0 15px;
+    margin-right: 12px;
+    box-sizing: border-box;
+    color: #000;
+  }
+
+  br {
+    display: none;
+  }
+
+  .wpcf7-form-control-wrap {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .file-text {
+    line-height: 24px;
+    color: #6f6f6f;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .wpcf7-form-control {
+
+    @media (min-width: 1500px) {
+      padding-left: 25px;
+    }
+  }
+}
+
+.input-search {
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    color: $red;
+    border-left: 1px solid $red;
+    border-top: 1px solid $red;
+    border-bottom: 1px solid $red;
+    height: 34px;
+    padding: 0 15px 0 20px;
+    font-size: 12px;
+    font-weight: 700;
+
+    @media (min-width: 576px) {
+      border-width: 3px;
+      height: 64px;
+      border-radius: 30px 0 0 30px;
+      font-size: 18px;
+      padding: 0 15px;
+    }
+
+    @media (min-width: 1400px) {
+      padding: 0 30px;
+    }
+
+    .single-post & {
+
+      @media (min-width: 1200px) and (max-width: 1599.98px) {
+        height: 50px;
+      }
+    }
+  }
+
+  button {
+    background: $red;
+    border-right: 1px solid $red;
+    border-top: 1px solid $red;
+    border-bottom: 1px solid $red;
+    border-left: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 30px;
+    color: #fff;
+    font-weight: 700;
+    transition: .2s;
+    text-transform: uppercase;
+
+    @media (min-width: 576px) {
+      border-width: 3px;
+      border-radius: 0 28px 28px 0;
+      font-size: 18px;
+    }
+
+    @media (min-width: 1400px) {
+      padding: 0 42px;
+    }
+
+    .single-post & {
+
+      @media (min-width: 1200px) and (max-width: 1599.98px) {
+        font-size: 0;
+        padding: 0 20px;
+
+        &:hover {
+          background: $red;
+          opacity: .8;
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          background-image: url(../images/search-white.svg);
+          background-size: 100%;
+          background-repeat: no-repeat;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    &:hover {
+      color: $red;
+      background-color: $gray;
+    }
+  }
+}

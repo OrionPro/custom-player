@@ -1,0 +1,100 @@
+.select2 {
+  max-width: 100%;
+
+  &.select2-container--default {
+    .select2-selection--single {
+      background: $white;
+      border: none;
+      height: auto;
+      position: relative;
+
+      .select2-selection__rendered {
+        padding: 20px 46px 20px 17px;
+        font-weight: 400;
+        color: $black;
+        font-size: 17px;
+        line-height: 150%;
+      }
+
+      .select2-selection__arrow {
+        position: initial;
+
+        &:before {
+          content: '';
+          display: inline-block;
+          mask-repeat: no-repeat;
+          mask-position: center;
+          mask-size: contain;
+          mask-image: url("../images/Combined_Shape.svg");
+          background-color: $black;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          right: 14px;
+          top: 50%;
+          transform: translateY(-50%) rotate(0deg);
+          @include transition;
+        }
+
+        b {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.select2-container--open {
+    .select2-selection--single {
+      .select2-selection__arrow {
+        &:before {
+          transform: translateY(-50%) rotate(-180deg);
+        }
+      }
+    }
+  }
+}
+
+span.select2-dropdown {
+  border: none;
+  background-color: transparent;
+  transform: translateY(20px);
+  overflow: hidden;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+
+  &.select2-dropdown--above {
+    transform: translateY(-20px);
+  }
+
+
+  .select2-results {
+
+    .select2-results__options {
+
+      .select2-results__option {
+        padding: 5px 10px;
+        background-color: $white;
+        color: $black;
+        font-size: 14px;
+        font-weight: 400;
+        @include transition;
+
+        &.select2-results__option--highlighted {
+          background-color: #bbbbbb;
+          color: $white;
+        }
+
+        &.select2-results__option--selected {
+          background-color: $white;
+          color: $black;
+
+        }
+      }
+    }
+  }
+}
+
+.select2-hidden-accessible {
+  bottom: 0;
+  left: 50%;
+  transform: rotateY(-50%);
+}

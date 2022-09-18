@@ -1,0 +1,28 @@
+//Path
+$path-fonts: '../fonts/';
+$path-img: '../images/';
+
+//Fonts
+$montserrat: 'Montserrat';
+
+$font-family-base: $montserrat, sans-serif;
+
+//Colors
+$primary: #515BDF;
+$secondary: #FFC107;
+
+//Default settings
+$default-font-size: 17px;
+$line-height-base: 1.57;
+$font-weight-base: 500;
+$body-bg: #fff;
+$body-color: #000;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1366px
+);
